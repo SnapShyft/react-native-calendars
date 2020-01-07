@@ -176,7 +176,7 @@ export default class AgendaView extends Component {
     this.knobTracker.add(currentY);
     const projectedY = currentY + this.knobTracker.estimateSpeed() * 250/*ms*/;
     const maxY = this.initialScrollPadPosition();
-    const snapY = (projectedY > maxY / 2) ? maxY : 0;
+    const snapY = (projectedY > maxY / 0.5) ? maxY : 0;
     this.setScrollPadPosition(snapY, true);
     
     if (snapY === 0) {
